@@ -1,0 +1,63 @@
+{
+  "name": "dsh-system-fonts",
+  "version": "0.1.0",
+  "description": "Pick any locally-installed font for the DSH web GUI — UI font (--dsw-font-family) and code font (--ds-font-family-code) — through a Settings → General picker that enumerates every system font. 直接从系统已安装字体中选择 DSH 界面字体与代码字体。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "font",
+    "fonts",
+    "typography",
+    "theme",
+    "字体",
+    "插件",
+    "cordis"
+  ],
+  "license": "MIT",
+  "author": "kiray",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiray/dsh-system-fonts"
+  },
+  "bugs": {
+    "url": "https://github.com/kiray/dsh-system-fonts/issues"
+  },
+  "homepage": "https://github.com/kiray/dsh-system-fonts#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": false,
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0",
+    "@deepseek-ai/dsh-client-ui-slots": "^0.1.0",
+    "@deepseek-ai/dsh-client-locale": "^0.1.0",
+    "@deepseek-ai/dsh-client-ui-theme": "^0.1.0"
+  }
+}
