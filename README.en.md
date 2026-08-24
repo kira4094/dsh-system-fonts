@@ -1,6 +1,6 @@
 # dsh-system-fonts
 
-> A font picker plugin for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) Web GUI. It enumerates **every font installed on your machine** and lets you set the **UI font** (`--dsw-font-family`) and the **code font** (`--ds-font-family-code`) freely — not limited to a few built-in presets.
+> A font picker plugin for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) Web GUI. It enumerates **every font installed on your machine** and lets you set the **UI font** (`--dsw-font-family`) and the **code font** (`--ds-font-family-code`).
 
 ![DSH](https://img.shields.io/badge/DSH-DeepSeek%20Harness-blue)
 ![dsh-plugin](https://img.shields.io/badge/dsh-plugin-system%20fonts-orange)
@@ -9,21 +9,24 @@
 
 中文说明: [README.zh-CN.md](./README.md)
 
-## Why?
+## What it does
 
-The official `dsh-fonts` plugin offers font settings but only via built-in presets or manually entered woff2 URLs (an offline webfont approach). It cannot enumerate the fonts already installed on your OS. If you want DSH to use a locally installed font (e.g. **Maple Mono NF CN**, Source Han Serif, JetBrains Mono…), `dsh-fonts` won't help directly.
+Let DSH use **any font already installed on your machine**:
 
-`dsh-system-fonts` takes a different route: the **host side reads your Windows font registry + font directories** and exposes every installed font to the browser as a picker. The chosen font is a system font rendered natively by the browser — **no webfont files needed**.
+- **UI font** (`--dsw-font-family`) — the overall DSH interface text
+- **Code font** (`--ds-font-family-code`) — code blocks and terminal text
+
+No font files needed — the plugin reads your Windows font registry and font directories and lists **every installed font** in a dropdown. Pick one and it applies instantly.
 
 ## Features
 
-- 🖥️ **Enumerate all system fonts**: reads `HKLM`/`HKCU` font registry + user/system font dirs, dedupes and strips weight suffixes (`Maple Mono NF CN Bold` → `Maple Mono NF CN`)
+- 🖥️ **Enumerate all system fonts**: reads `HKLM`/`HKCU` font registry + user/system font dirs, dedupes and strips weight suffixes (e.g. `FontName Bold` → `FontName`)
 - 🎨 **Independent UI & code font**: controls `--dsw-font-family` and `--ds-font-family-code`
 - ⚡ **Instant apply**: via the official `ctx.theme.overrideTokens` API — applies immediately, no refresh
 - 💾 **Persistent**: saved in `localStorage`
 - 🔄 **Refresh button**: re-enumerate after installing new fonts
 - 🌐 **Bilingual**: follows the DSH UI language
-- 🔧 **No official code touched**: pure plugin on the profile layer
+- 🔧 **No official code touched**: pure plugin on the profile layer, uninstall restores everything
 
 ## Install
 
@@ -82,10 +85,3 @@ Issues and PRs welcome:
 ## License
 
 [MIT](./LICENSE)
-
-## Links
-
-- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)
-- [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)
-- [dsh-fonts](https://github.com/zhijun-dai/dsh-Fonts) (layout reference)
-- [Maple Mono](https://github.com/subframe7536/maple-font) (popular coding font, includes NF-CN)

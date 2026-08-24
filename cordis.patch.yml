@@ -1,7 +1,6 @@
 # dsh-system-fonts bundle layer. Inserts this plugin's own row into the
 # composed cordis tree. The browser half is picked up by dsh-client-modules
-# through the package's dsh.client declaration, exactly like the shipped ui-*
-# packages and dsh-fonts.
+# through the package's dsh.client declaration.
 - insert:
     - id: system-fonts
       name: dsh-system-fonts
