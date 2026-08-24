@@ -31,7 +31,7 @@ No font files needed — the plugin reads your Windows font registry and font di
 ## Install
 
 ```sh
-dsh plugin --profile web add github:kiray/dsh-system-fonts
+dsh plugin --profile web add github:kira4094/dsh-system-fonts
 ```
 
 Or from a local checkout (profile dir is the pnpm workspace root, add `-w`):

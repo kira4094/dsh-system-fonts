@@ -47,7 +47,7 @@
 ### 从 GitHub 安装（推荐）
 
 ```sh
-dsh plugin --profile web add github:kiray/dsh-system-fonts
+dsh plugin --profile web add github:kira4094/dsh-system-fonts
 ```
 
 ### 本地目录安装

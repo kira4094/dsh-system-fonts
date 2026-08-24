@@ -29,15 +29,15 @@
     "cordis"
   ],
   "license": "MIT",
-  "author": "kiray",
+  "author": "kira4094",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kiray/dsh-system-fonts"
+    "url": "https://github.com/kira4094/dsh-system-fonts"
   },
   "bugs": {
-    "url": "https://github.com/kiray/dsh-system-fonts/issues"
+    "url": "https://github.com/kira4094/dsh-system-fonts/issues"
   },
-  "homepage": "https://github.com/kiray/dsh-system-fonts#readme",
+  "homepage": "https://github.com/kira4094/dsh-system-fonts#readme",
   "engines": {
     "node": ">=20"
   },
